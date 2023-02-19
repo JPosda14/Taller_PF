@@ -25,9 +25,6 @@ List<T> list1 = new ArrayList<>();
     public static <T> List<T> filterlist(List<T> values, Predicate<T> predicate){
         return values.stream().filter(predicate).collect(Collectors.toList());
     }
-    public static <T> void impr(List<T> values, Consumer<T> consumer){
-        values.forEach(consumer);
-    }
     public static <T> T nonlist(List<T> values, BinaryOperator<T> binaryOperator){
         return values.stream().reduce(binaryOperator).get();
     }
